@@ -93,11 +93,11 @@ model_params = {
 model_type = 'TCs'
 
 if model_type == 'TCs':
-    train_data_split = split_excel("D:\专利\软著\抗生素吸附软著\模型数据集.xlsx", 'OTC', 'TC', 'CTC', 210)
+    train_data_split = split_excel("模型数据集.xlsx", 'OTC', 'TC', 'CTC', 210)
 elif model_type == 'SAs':
-    train_data_split = split_excel("D:\专利\软著\抗生素吸附软著\模型数据集.xlsx", 'SDZ', 'SCP', 'SMT', 490)
+    train_data_split = split_excel("模型数据集.xlsx", 'SDZ', 'SCP', 'SMT', 490)
 elif model_type == 'FQs':
-    train_data_split = split_excel("D:\专利\软著\抗生素吸附软著\模型数据集.xlsx", 'ENR', 'CIP', 'NOR', 28)
+    train_data_split = split_excel("模型数据集.xlsx", 'ENR', 'CIP', 'NOR', 28)
 
 train_data_scaled = train_data_split[0]
 groups = train_data_scaled.groupby(['Type'])
