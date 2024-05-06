@@ -151,8 +151,7 @@ def main():
     Ce = st.text_input("水中平衡浓度(Ce, mg/L)", "")
 
     if st.button("手动预测"):
-        result = predict_antibiotic_adsorption(model_type, float(pH), float(CEC), float(OC), float(Clay), float(Sand),
-                                               float(I), float(Ratio), float(logKow), float(pKa1), float(Ce))
+        result = predict_antibiotic_adsorption(model_type, pH, CEC, OC, Clay, Sand, I, Ratio, logKow, pKa1, Ce)
         st.success('预测结果土壤吸附量（logCs, mg/kg）：{}'.format(result))
 
     st.write("---")
